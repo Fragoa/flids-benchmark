@@ -2,6 +2,10 @@
 
 Code and reference tables for the federated intrusion-detection benchmark. The primary tuned evaluation holds out each of four NetFlow datasets, with five seeds and 15 methods. The revision reports 300 native evaluations and 1,120 allocation or participation variants. Each policy reuses the scores from its corresponding fitted model.
 
+## Historical experiments 01–09
+
+[Stage-by-stage guide and readable Python engines](experiments/early/README.md) · [Experiments 08–09 retuning sources](experiments/retuning/). The guide maps the original experiment numbers to their inputs, outputs and Kaggle entry points.
+
 ## Run the primary benchmark on Kaggle
 
 1. Import [the fresh-run notebook](notebooks/current/FLIDS_Master_V3_Fresh.ipynb). Attach the project artifact `FLIDS_Experiment09_Results.zip`, or its extracted dataset with its reproducibility folder. Alternatively, set `EXP09_ZIP` to the exact mounted path of the canonical Experiment 09 ZIP.
