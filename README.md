@@ -39,3 +39,24 @@ Rates in the CSV files are fractions. The target-quantile and target-calibrated 
 ## Inputs and provenance
 
 Raw traffic, prepared input archives, checkpoints, and individual flow scores are supplied separately. [run_identity.json](reference/run_identity.json) records the training parameters and the SHA-256 digests of the research master source and canonical NF input. The three files in `experiments/tuned/` were checked against both the fresh-run notebook and the archived execution. Historical notebooks retain their source cells; saved outputs and execution metadata are cleared.
+
+## Later analyses and code history
+
+| Location | Purpose |
+| --- | --- |
+| [Original V2 modules and checkpoint identity](experiments/v2/) | Source of the 3,600-trial historical checkpoint, before the fresh-run revision. |
+| [Notebook builders](tools/) and [execution checks](checks/) | Construct the recovery, fresh-run and reviewer notebooks and check checkpoint replay. The first two builders write into the working directory; run them in an empty build folder in recovery-then-fresh order. Recovery checks need the original Experiment 09 and Packages 10–13 ZIPs under the user's Downloads directory. |
+| [Earlier NetFlow tree benchmark](notebooks/legacy/NF_CrossDomain_FedTrees_Kaggle_AutoRun.ipynb) | Historical cross-dataset experiment, distinct from the primary tuned protocol. |
+| [Manuscript analyses](analysis/manuscript/) | Archived-score replay, target ROC and low-FPR tails, source-group checks, paired comparisons, alert scenarios and the tuned operating-point figure. Results are under `tables/`. |
+| [Reviewer experiments](review/ablation/README.md) | Self-contained Kaggle notebook, matched no-ports and no-ports/TTL retraining, Edge row/signature replay, projection audit and completed audit tables. The full 600-pair retraining is a separate experiment. |
+
+From the repository root, reproduce the manuscript analyses with:
+
+```bash
+python analysis/manuscript/analyze.py /path/to/FLIDS_Master_V3_Fresh_Results.zip
+python analysis/manuscript/source_check.py /path/to/FLIDS_Master_V3_Fresh_Results.zip /path/to/FLIDS_Experiment01_Results.zip
+python analysis/manuscript/operational.py /path/to/FLIDS_Master_V3_Fresh_Results.zip
+python analysis/manuscript/plot_operating.py
+```
+
+The reviewer notebook embeds its engine files so it also works as a standalone Kaggle upload. The matching adjacent modules are provided for inspection and command-line use.

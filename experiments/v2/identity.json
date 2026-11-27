@@ -1,0 +1,12 @@
+{
+  "smoke": false,
+  "trials": 4,
+  "rounds": 150,
+  "min_round": 30,
+  "local_steps": 8,
+  "batch": 256,
+  "check_every": 5,
+  "patience": 10,
+  "source_sha": "9d17d23227aa6517d27f6ec3ae083d2b0cb074676452739295a7eb7f92484d90",
+  "input_exp09_sha": "3cb34f8a174bb9a9ef84647e2c5e49599b0da3abaad589e73f62c968682f97eb"
+}

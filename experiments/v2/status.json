@@ -1,0 +1,32 @@
+{
+  "mode": "research",
+  "packages": {
+    "10": "completed_on_nf"
+  },
+  "notes": [
+    "All results are exploratory benchmark results. No unseen-domain FPR guarantee. No DP or secure aggregation.",
+    "Equal candidate counts, not equal wall-clock time; FedNova and SCAFFOLD use SGD and report different step budgets.",
+    "Record-level CIs assume independent flows; only four NF domains; no confirmatory mixed-effects inference.",
+    "FedRAT is a tolerance-bound prototype, not established novel or distribution-free under shift. Source-domain groups are not physical clients, and in synthetic allocations they do not correspond to client IDs.",
+    "Historical Exp03 and Edge score equality cannot be established without their raw original artifacts; new-run audits only.",
+    "FedBN is an explicit source-BN-ensemble adaptation for an unseen site; DANN_Source is a source-only adversarial baseline, not unsupervised target adaptation."
+  ],
+  "optional_inputs": {
+    "edge": {
+      "state": "blocked_invalid_input",
+      "reason": "ValueError('Unable to parse string \"2.debian.pool.ntp.org\" at position 163')"
+    },
+    "external": {
+      "state": "blocked_missing_input"
+    },
+    "temporal": {
+      "state": "blocked_invalid_input",
+      "reason": "AssertionError('Nonfinite temporal feature; verify extraction before evaluation')"
+    }
+  },
+  "state": "paused_for_resume",
+  "reason": "Configured session budget reached; resume from candidate/bundle records.",
+  "completed_model_bundles": 817,
+  "completed_tuning_trials": 3600,
+  "completed_analysis_bundles": 658
+}

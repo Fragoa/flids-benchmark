@@ -1,0 +1,13 @@
+variant,holdout,rows,matching_other_domain,matching_benign,matching_attack
+full,NF-BoT-IoT,23949,0,0,0
+full,NF-CSE-CIC-IDS2018,23972,0,0,0
+full,NF-ToN-IoT,23937,0,0,0
+full,NF-UNSW-NB15,21952,0,0,0
+no_ports,NF-BoT-IoT,23949,1443,975,468
+no_ports,NF-CSE-CIC-IDS2018,23972,214,56,158
+no_ports,NF-ToN-IoT,23937,9384,8788,596
+no_ports,NF-UNSW-NB15,21952,0,0,0
+no_ports_ttl,NF-BoT-IoT,23949,1444,976,468
+no_ports_ttl,NF-CSE-CIC-IDS2018,23972,214,56,158
+no_ports_ttl,NF-ToN-IoT,23937,9385,8789,596
+no_ports_ttl,NF-UNSW-NB15,21952,3,0,3
